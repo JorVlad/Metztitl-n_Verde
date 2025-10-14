@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conciencia Climática - Mi Ciudad Verde</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Logo_Earth.svg" alt="Logo" />
+            <h1>Mi Ciudad Verde</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#consecuencias">Consecuencias</a></li>
+                <li><a href="#historia">Historia</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="inicio">
+        <section class="videos">
+            <h2>Videos informativos</h2>
+            <article>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/qqYbK8ZCzNs" title="Cambio Climático"></iframe>
+            </article>
+        </section>
+
+        <section class="imagenes">
+            <h2>Imágenes del impacto ambiental</h2>
+            <article>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Global_Warming_Map.jpg/800px-Global_Warming_Map.jpg" alt="Mapa del cambio climático">
+            </article>
+        </section>
+
+        <section id="consecuencias">
+            <h2>Consecuencias del cambio climático</h2>
+            <article>
+                <p>
+                    El aumento de temperaturas provoca sequías, incendios forestales y pérdida de biodiversidad. 
+                    En nuestra ciudad, se han registrado más olas de calor y menor disponibilidad de agua.
+                </p>
+            </article>
+        </section>
+
+        <section id="historia">
+            <h2>Historia del cambio climático</h2>
+            <article>
+                <p>
+                    Desde la Revolución Industrial, las emisiones de gases de efecto invernadero han crecido exponencialmente. 
+                    En el siglo XXI, los efectos son cada vez más visibles a nivel global y local.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <section class="noticias">
+            <h3>Noticias del clima</h3>
+            <ul>
+                <li><a href="https://www.nationalgeographic.com/environment" target="_blank">National Geographic</a></li>
+                <li><a href="https://climate.nasa.gov/news/" target="_blank">NASA Climate News</a></li>
+                <li><a href="https://www.un.org/es/climatechange" target="_blank">ONU - Cambio Climático</a></li>
+            </ul>
+        </section>
+        <p>© 2025 Mi Ciudad Verde | Todos los derechos reservados. Autor: <strong>Jordán Bautista Hernández</strong></p>
+    </footer>
+</body>
+</html>
