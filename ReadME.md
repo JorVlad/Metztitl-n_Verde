@@ -71,7 +71,7 @@ Footer con enlaces a noticias externas relevantes.
 
 Diseño con paleta de colores: verde oscuro, azul oscuro y beige.
 
-Derechos de autor: Mi Jordan.
+Derechos de autor: Jordan.
 
 📦 Dependencias
 text
@@ -102,4 +102,4 @@ Uso de animaciones moderadas (fade-in, transiciones suaves).
 📝 Licencia & Créditos
 Autor: Jordán Bautista Hernández
 
-© 2025 Mi Ciudad Verde — Todos los derechos reservados.
+© 2025 Metztitlán Verde — Todos los derechos reservados.
