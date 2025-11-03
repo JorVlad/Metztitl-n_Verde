@@ -1,9 +1,15 @@
+/* =========================
+   VARIABLES DE COLOR
+========================= */
 :root {
     --verde-oscuro: #14532d;
     --azul-oscuro: #0f172a;
     --beige: #f5f5dc;
 }
 
+/* =========================
+   ESTILOS BASE
+========================= */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -11,10 +17,10 @@ body {
     color: var(--azul-oscuro);
 }
 
-/* HEADER */
-
+/* =========================
+   HEADER
+========================= */
 header {
-
     background: linear-gradient(to right, var(--verde-oscuro), var(--azul-oscuro));
     color: white;
     display: flex;
@@ -34,7 +40,9 @@ header .logo img {
     border-radius: 5px;
 }
 
-/* NAV */
+/* =========================
+   NAVEGACIÓN
+========================= */
 nav ul {
     list-style: none;
     display: flex;
@@ -54,7 +62,19 @@ nav a:hover {
     color: var(--beige);
 }
 
-/* MAIN */
+/* Botón del menú (hamburguesa) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* =========================
+   CONTENIDO PRINCIPAL
+========================= */
 main {
     padding: 30px;
 }
@@ -68,39 +88,16 @@ h2 {
     padding-left: 10px;
 }
 
-iframe, img {
+iframe,
+img {
     width: 100%;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* FOOTER */
-footer {
-    background: var(--azul-oscuro);
-    color: white;
-    padding: 40px;
-    text-align: center;
-}
-
-footer a {
-    color: #a3e635;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-footer .noticias ul {
-    list-style: none;
-    padding: 0;
-}
-
-footer .noticias li {
-    margin:0;
-}
-
-/* ==== CARRUSEL ==== */
+/* =========================
+   CARRUSEL
+========================= */
 .carrusel {
     text-align: center;
     margin: 40px auto;
@@ -111,7 +108,7 @@ footer .noticias li {
     position: relative;
     overflow: hidden;
     border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .slides {
@@ -126,7 +123,8 @@ footer .noticias li {
     border-radius: 15px;
 }
 
-.prev, .next {
+.prev,
+.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -141,14 +139,22 @@ footer .noticias li {
     transition: opacity 0.3s;
 }
 
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
     opacity: 1;
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
+.prev {
+    left: 10px;
+}
 
-/* ==== LÍNEA DEL TIEMPO ==== */
+.next {
+    right: 10px;
+}
+
+/* =========================
+   LÍNEA DEL TIEMPO
+========================= */
 .timeline {
     max-width: 600px;
     margin: 0 auto 60px;
@@ -189,100 +195,140 @@ footer .noticias li {
 .timeline-content p {
     margin: 5px 0 0;
 }
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 28px;
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background: var(--azul-oscuro);
     color: white;
-    cursor: pointer;
+    padding: 40px;
+    text-align: center;
 }
 
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .menu-toggle {
-    display: block;
-    margin-left: auto;
-  }
-
-  nav {
-    width: 100%;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    display: none;
-    width: 100%;
-    padding: 10px 0;
-  }
-
-  nav ul.show {
-    display: flex;
-  }
-
-  .carrusel {
-    max-width: 100%;
-    margin: 20px auto;
-  }
-
-  .slider {
-    border-radius: 10px;
-  }
-
-  .prev, .next {
-    padding: 8px 12px;
-    font-size: 16px;
-  }
-
-  main {
-    padding: 20px;
-  }
-
-  iframe, img {
-    width: 100%;
-    height: auto;
-  }
-
-  .timeline {
-    padding: 10px;
-    border-left: 3px solid var(--verde-oscuro);
-  }
-
-  .timeline-item {
-    padding-left: 20px;
-  }
-
-  .timeline-item::before {
-    width: 16px;
-    height: 16px;
-    left: -8px;
-    box-shadow: 0 0 0 3px var(--beige);
-  }
-
-  footer {
-    padding: 15px;
-    font-size: 14px;
-  }
+footer a {
+    color: #a3e635;
+    text-decoration: none;
 }
-@media screen and (max-width: 900px) {
-    .contenido {
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .noticias ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .noticias li {
+    margin: 0;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* TABLETAS Y CELULARES GRANDES */
+@media (max-width: 1024px) {
+    header {
         flex-direction: column;
-        padding: 10px;
+        align-items: flex-start;
+        padding: 15px 20px;
     }
 
-    .caja {
-        margin: 5px 0;
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        display: none;
+        width: 100%;
+        padding: 10px 0;
+        background: linear-gradient(to bottom, var(--verde-oscuro), var(--azul-oscuro));
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    nav a {
         font-size: 18px;
     }
 
+    main {
+        padding: 20px;
+    }
+
+    iframe,
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .timeline {
+        padding: 10px;
+        border-left: 3px solid var(--verde-oscuro);
+    }
+
+    .timeline-item {
+        padding-left: 20px;
+    }
+
+    .timeline-item::before {
+        width: 16px;
+        height: 16px;
+        left: -8px;
+        box-shadow: 0 0 0 3px var(--beige);
+    }
+
+    footer {
+        padding: 20px;
+        font-size: 14px;
+    }
+}
+
+/* CELULARES (pantallas pequeñas) */
+@media (max-width: 600px) {
+    h2 {
+        font-size: 1.2em;
+    }
+
     header {
-        background-color: purple;
-        font-size: 20px;
+        padding: 10px 15px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    .carrusel {
+        max-width: 100%;
+        margin: 15px auto;
+    }
+
+    .prev,
+    .next {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+
+    .timeline {
+        margin-bottom: 30px;
+    }
+
+    footer {
         padding: 15px;
     }
 }
