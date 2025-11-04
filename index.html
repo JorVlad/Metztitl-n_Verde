@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conciencia Climática - Metztitlán anti-inundaciones</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="style.css">
   </div>
 
   <button class="menu-toggle" onclick="toggleMenu()">☰</button>
@@ -18,34 +18,40 @@
 
 <body>
     <header>
-  <div class="logo">
-    <img src="tu-logo.png" alt="Logo">
-    <h1>Mi Sitio</h1>
-  </div>
+        <div class="logo">
+            <img src="Logo.jpeg" alt="Logo Conciencia Climática">
+            <h1>
+                <span>Conciencia</span><br>
+                <span>Climática</span>
+            </h1>
+        </div>
 
-  <!-- Botón del menú hamburguesa -->
-  <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
-  <nav>
-    <ul>
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#galeria">Galería</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
-</header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#consecuencias">Consecuencias</a></li>
+                <li><a href="#imagenes">Galería</a></li>
+                <li><a href="#historia">Historia</a></li>
+            </ul>
+        </nav>
+    </header>
 
 
     <main id="inicio">
-        <section class="videos">
-            <h2>Videos informativos</h2>
-            <article>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/UU2yq-S-QtU?si=gjFHmH81715TdBfH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </article>
+        <section id="inicio">
+            <h2>🎥 Videos informativos</h2>
+            <div class="video-container">
+                <iframe
+                    src="https://www.youtube.com/embed/UU2yq-S-QtU?si=ggjFHmH81715TdBfH"
+                    title="Inundaciones en Meztitlán"
+                    allowfullscreen>
+                </iframe>
+            </div>
         </section>
-
-        <section class="imagenes">
+        
+        <section id="imagenes" class="imagenes">
             <h2>Imágenes del impacto ambiental</h2>
             <article>
               <section class="carrusel">
@@ -85,48 +91,48 @@
             </article>
         </section>
 
-        <section class="timeline">
-      <h2>Cambios en el ambiente según personas locales</h2>
-      <div class="timeline-item">
-        <div class="timeline-date">1970 - 1980</div>
-        <div class="timeline-content">
-          <h3>Primeros cambios</h3>
-          <p>1970 Reducción de las lluvias de mayo, esperadas en el ciclo agrícola.</p>
-          <p>1980 Aumento de plagas y riesgos para las hortalizas.</p>
-          <p>1980 sequías alternantes con inundaciones</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">1980 - 1990</div>
-        <div class="timeline-content">
-          <h3>Agotamiento del suelo</h3>
-          <p>1982 Más difícil la siembra de algunas hortalizas, entre ellas la papa y el tomate.</p>
-          <p>1985 Necesidad de mayor tecnología para la siembra de algunos cultivos, dando como resultado el aumento de fertilizantes.</p>
-          <p>1987 Aumento de leyes para la protección de la fauna.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">1990 - 2010</div>
-        <div class="timeline-content">
-          <h3>Cambios grandes en el medio ambiente</h3>
-          <p>1990 Aumento de la intensidad de olas de calor.</p>
-          <p>1993 Fenómenos naturales más extremos, trayendo sequías fuertes e inundaciones de creciente alta.</p>
-          <p>1999 Inundación devastadora que trajo daños económicos enormes.</p>
-          <p>2002 cambios grandes en el ciclo del agua.</p>
-          <p>2004 Inundación media, no tan devastadora pero preocupante.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">2010 - 2025</div>
-        <div class="timeline-content">
-          <h3>Actualidad y consecuencias</h3>
-          <p>2015 Aumento de temperatura alarmante.</p>
-          <p>2018 Primer registro de temperatura mayor a 45° en Metztitlán.</p>
-          <p>2020 Inicio de sequías brutales,en febrero se reportó la primera vez de la sequía total de la laguna .</p>
-          <p>2023 En abril, se reporta segunda sequía total de laguna.</p>
-          <p>2024 Recuperación de la laguna y lluvias semi fuertes.</p>
-          <p>2025 Tercera inundación alarmante de Metztitlán.</p> 
-    </section>
+        <section class="timeline" id="historia">
+          <h2>Cambios en el ambiente según personas locales</h2>
+          <div class="timeline-item">
+            <div class="timeline-date">1970 - 1980</div>
+            <div class="timeline-content">
+              <h3>Primeros cambios</h3>
+              <p>1970 Reducción de las lluvias de mayo, esperadas en el ciclo agrícola.</p>
+              <p>1980 Aumento de plagas y riesgos para las hortalizas.</p>
+              <p>1980 sequías alternantes con inundaciones</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">1980 - 1990</div>
+            <div class="timeline-content">
+              <h3>Agotamiento del suelo</h3>
+              <p>1982 Más difícil la siembra de algunas hortalizas, entre ellas la papa y el tomate.</p>
+              <p>1985 Necesidad de mayor tecnología para la siembra de algunos cultivos, dando como resultado el aumento de fertilizantes.</p>
+              <p>1987 Aumento de leyes para la protección de la fauna.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">1990 - 2010</div>
+            <div class="timeline-content">
+              <h3>Cambios grandes en el medio ambiente</h3>
+              <p>1990 Aumento de la intensidad de olas de calor.</p>
+              <p>1993 Fenómenos naturales más extremos, trayendo sequías fuertes e inundaciones de creciente alta.</p>
+              <p>1999 Inundación devastadora que trajo daños económicos enormes.</p>
+              <p>2002 cambios grandes en el ciclo del agua.</p>
+              <p>2004 Inundación media, no tan devastadora pero preocupante.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2010 - 2025</div>
+            <div class="timeline-content">
+              <h3>Actualidad y consecuencias</h3>
+              <p>2015 Aumento de temperatura alarmante.</p>
+              <p>2018 Primer registro de temperatura mayor a 45° en Metztitlán.</p>
+              <p>2020 Inicio de sequías brutales,en febrero se reportó la primera vez de la sequía total de la laguna .</p>
+              <p>2023 En abril, se reporta segunda sequía total de laguna.</p>
+              <p>2024 Recuperación de la laguna y lluvias semi fuertes.</p>
+              <p>2025 Tercera inundación alarmante de Metztitlán.</p> 
+        </section>
     </main>
         <footer>
         <section class="noticias">
@@ -141,31 +147,40 @@
     </footer>
 
     <script>
-const slides = document.querySelector('.slides');
-const images = document.querySelectorAll('.slides img');
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
+      const slides = document.querySelector('.slides');
+      const images = document.querySelectorAll('.slides img');
+      const prevBtn = document.querySelector('.prev');
+      const nextBtn = document.querySelector('.next');
 
-let index = 0;
+      let index = 0;
 
-function showSlide(i) {
-    index = (i + images.length) % images.length;
-    slides.style.transform = `translateX(${-index * 100}%)`;
-}
+      function showSlide(i) {
+          index = (i + images.length) % images.length;
+          slides.style.transform = `translateX(${-index * 100}%)`;
+      }
 
-nextBtn.addEventListener('click', () => showSlide(index + 1));
-prevBtn.addEventListener('click', () => showSlide(index - 1));
+      nextBtn.addEventListener('click', () => showSlide(index + 1));
+      prevBtn.addEventListener('click', () => showSlide(index - 1));
 
-// Avance automático cada 5 segundos
-setInterval(() => showSlide(index + 1), 5000);
+      // Avance automático cada 5 segundos
+      setInterval(() => showSlide(index + 1), 5000);
 
-const toggle = document.querySelector('.menu-toggle');
-  const navList = document.querySelector('nav ul');
-  toggle.addEventListener('click', () => {
-    navList.classList.toggle('show');
-  });
+      const toggle = document.querySelector('.menu-toggle');
+        const navList = document.querySelector('nav ul');
+        toggle.addEventListener('click', () => {
+          navList.classList.toggle('show');
+        });
+      
+      // Script para el menú hamburguesa
+      document.addEventListener("DOMContentLoaded", () => {
+          const toggle = document.querySelector(".menu-toggle");
+          const menu = document.querySelector("nav ul");
 
-</script>
+          toggle.addEventListener("click", () => {
+              menu.classList.toggle("show");
+          });
+      });
+    </script>
 
 </body>
 </html>
